@@ -1,0 +1,170 @@
+{
+  "name": "Order",
+  "type": "object",
+  "properties": {
+    "orderNumber": {
+      "type": "string"
+    },
+    "customerId": {
+      "type": "string"
+    },
+    "customerName": {
+      "type": "string"
+    },
+    "restaurantId": {
+      "type": "string"
+    },
+    "restaurantName": {
+      "type": "string"
+    },
+    "riderId": {
+      "type": "string"
+    },
+    "riderName": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "menuItemId": {
+            "type": "string"
+          },
+          "nameSnapshot": {
+            "type": "string"
+          },
+          "priceSnapshot": {
+            "type": "number"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "variant": {
+            "type": "string"
+          },
+          "extras": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "subtotal": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "subtotal": {
+      "type": "number",
+      "default": 0
+    },
+    "deliveryFee": {
+      "type": "number",
+      "default": 0
+    },
+    "serviceFee": {
+      "type": "number",
+      "default": 0
+    },
+    "discount": {
+      "type": "number",
+      "default": 0
+    },
+    "total": {
+      "type": "number",
+      "default": 0
+    },
+    "currency": {
+      "type": "string",
+      "default": "NGN"
+    },
+    "deliveryAddress": {
+      "type": "string"
+    },
+    "deliveryLatitude": {
+      "type": "number"
+    },
+    "deliveryLongitude": {
+      "type": "number"
+    },
+    "deliveryInstructions": {
+      "type": "string"
+    },
+    "contactPhone": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "CREATED",
+        "PAYMENT_PENDING",
+        "FUNDED",
+        "RESTAURANT_ACCEPTED",
+        "PREPARING",
+        "READY_FOR_PICKUP",
+        "RIDER_ASSIGNED",
+        "PICKED_UP",
+        "OUT_FOR_DELIVERY",
+        "DELIVERED",
+        "SETTLEMENT_PENDING",
+        "SETTLED",
+        "CANCELLED",
+        "REFUND_PENDING",
+        "REFUNDED",
+        "DISPUTED"
+      ],
+      "default": "CREATED"
+    },
+    "paymentStatus": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "PAID",
+        "FAILED",
+        "REFUNDED"
+      ],
+      "default": "PENDING"
+    },
+    "paymentMethod": {
+      "type": "string",
+      "default": "SANDBOX"
+    },
+    "promoCode": {
+      "type": "string"
+    },
+    "pickupPin": {
+      "type": "string"
+    },
+    "deliveryPin": {
+      "type": "string"
+    },
+    "acceptedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "readyAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "pickedUpAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "deliveredAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "cancelledAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "estimatedArrival": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "customerId",
+    "restaurantId"
+  ]
+}

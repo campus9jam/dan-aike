@@ -1,0 +1,55 @@
+{
+  "name": "Promotion",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "discountType": {
+      "type": "string",
+      "enum": [
+        "PERCENTAGE",
+        "FIXED",
+        "FREE_DELIVERY"
+      ]
+    },
+    "amount": {
+      "type": "number",
+      "default": 0
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "usageLimit": {
+      "type": "number",
+      "default": 100
+    },
+    "usedCount": {
+      "type": "number",
+      "default": 0
+    },
+    "minimumOrder": {
+      "type": "number",
+      "default": 0
+    },
+    "restaurantId": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "code",
+    "discountType"
+  ]
+}

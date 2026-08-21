@@ -1,0 +1,41 @@
+{
+  "name": "AuditLog",
+  "type": "object",
+  "properties": {
+    "actorId": {
+      "type": "string"
+    },
+    "actorRole": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string"
+    },
+    "entityType": {
+      "type": "string"
+    },
+    "entityId": {
+      "type": "string"
+    },
+    "previousState": {
+      "type": "object"
+    },
+    "newState": {
+      "type": "object"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "actorId",
+    "action"
+  ]
+}

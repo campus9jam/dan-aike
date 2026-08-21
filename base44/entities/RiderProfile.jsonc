@@ -1,0 +1,77 @@
+{
+  "name": "RiderProfile",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "string"
+    },
+    "vehicleType": {
+      "type": "string",
+      "enum": [
+        "MOTORCYCLE",
+        "BICYCLE",
+        "CAR"
+      ],
+      "default": "MOTORCYCLE"
+    },
+    "plateNumber": {
+      "type": "string"
+    },
+    "verificationStatus": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "VERIFIED",
+        "REJECTED",
+        "SUSPENDED"
+      ],
+      "default": "VERIFIED"
+    },
+    "availability": {
+      "type": "string",
+      "enum": [
+        "ONLINE",
+        "OFFLINE"
+      ],
+      "default": "ONLINE"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "rating": {
+      "type": "number",
+      "default": 5
+    },
+    "completedDeliveries": {
+      "type": "number",
+      "default": 0
+    },
+    "totalEarnings": {
+      "type": "number",
+      "default": 0
+    },
+    "operatingZone": {
+      "type": "string",
+      "default": "Kano"
+    },
+    "emergencyContact": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "phone"
+  ]
+}

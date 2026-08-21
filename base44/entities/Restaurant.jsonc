@@ -1,0 +1,95 @@
+{
+  "name": "Restaurant",
+  "type": "object",
+  "properties": {
+    "ownerId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "string"
+    },
+    "coverImage": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "openingHours": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "number",
+      "default": 0
+    },
+    "reviewCount": {
+      "type": "number",
+      "default": 0
+    },
+    "commissionRate": {
+      "type": "number",
+      "default": 0.12
+    },
+    "deliveryEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "APPROVED",
+        "REJECTED",
+        "SUSPENDED"
+      ],
+      "default": "APPROVED"
+    },
+    "isOpen": {
+      "type": "boolean",
+      "default": true
+    },
+    "deliveryFee": {
+      "type": "number",
+      "default": 500
+    },
+    "prepTimeMin": {
+      "type": "number",
+      "default": 20
+    },
+    "prepTimeMax": {
+      "type": "number",
+      "default": 35
+    },
+    "deliveryTimeMin": {
+      "type": "number",
+      "default": 25
+    },
+    "deliveryTimeMax": {
+      "type": "number",
+      "default": 40
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

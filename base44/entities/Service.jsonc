@@ -1,0 +1,71 @@
+{
+  "name": "Service",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Service name"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "daily",
+        "food",
+        "logistics",
+        "home_services",
+        "drive_me"
+      ],
+      "description": "Main service category"
+    },
+    "subcategory": {
+      "type": "string",
+      "description": "Specific service type"
+    },
+    "description": {
+      "type": "string"
+    },
+    "base_price": {
+      "type": "number",
+      "description": "Starting price in Naira"
+    },
+    "price_per_unit": {
+      "type": "number",
+      "description": "Price per km, hour, or item"
+    },
+    "unit_type": {
+      "type": "string",
+      "enum": [
+        "fixed",
+        "per_km",
+        "per_hour",
+        "per_item"
+      ]
+    },
+    "availability_hours": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "string"
+        },
+        "end": {
+          "type": "string"
+        }
+      }
+    },
+    "service_areas": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Areas where service is available"
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Special requirements or notes"
+    }
+  },
+  "required": []
+}

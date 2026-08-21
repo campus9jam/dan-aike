@@ -1,0 +1,46 @@
+{
+  "name": "Refund",
+  "type": "object",
+  "properties": {
+    "orderId": {
+      "type": "string"
+    },
+    "paymentId": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "FULL",
+        "PARTIAL"
+      ],
+      "default": "FULL"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "adminActorId": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "COMPLETED",
+        "FAILED"
+      ],
+      "default": "PENDING"
+    },
+    "processedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "orderId",
+    "amount"
+  ]
+}

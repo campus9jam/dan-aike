@@ -1,0 +1,39 @@
+{
+  "name": "SupportTicket",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "OPEN",
+        "IN_PROGRESS",
+        "RESOLVED"
+      ],
+      "default": "OPEN"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH",
+        "URGENT"
+      ],
+      "default": "MEDIUM"
+    }
+  },
+  "required": [
+    "userId",
+    "subject",
+    "description"
+  ]
+}

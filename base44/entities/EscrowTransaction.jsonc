@@ -1,0 +1,44 @@
+{
+  "name": "EscrowTransaction",
+  "type": "object",
+  "properties": {
+    "orderId": {
+      "type": "string"
+    },
+    "paymentId": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "CREATED",
+        "FUNDED",
+        "RELEASED",
+        "HELD"
+      ],
+      "default": "CREATED"
+    },
+    "fundedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "holdReason": {
+      "type": "string"
+    },
+    "releaseEligibleAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "releasedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "orderId",
+    "amount"
+  ]
+}

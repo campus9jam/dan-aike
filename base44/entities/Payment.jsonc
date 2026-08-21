@@ -1,0 +1,47 @@
+{
+  "name": "Payment",
+  "type": "object",
+  "properties": {
+    "orderId": {
+      "type": "string"
+    },
+    "customerId": {
+      "type": "string"
+    },
+    "provider": {
+      "type": "string",
+      "default": "SANDBOX"
+    },
+    "providerReference": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "currency": {
+      "type": "string",
+      "default": "NGN"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "SUCCESS",
+        "FAILED",
+        "REFUNDED"
+      ],
+      "default": "PENDING"
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "verifiedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "orderId",
+    "amount"
+  ]
+}

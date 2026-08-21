@@ -1,0 +1,59 @@
+{
+  "name": "MenuItem",
+  "type": "object",
+  "properties": {
+    "restaurantId": {
+      "type": "string"
+    },
+    "categoryId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "available": {
+      "type": "boolean",
+      "default": true
+    },
+    "preparationTime": {
+      "type": "number",
+      "default": 15
+    },
+    "sortOrder": {
+      "type": "number",
+      "default": 0
+    },
+    "variants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "popular": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "restaurantId",
+    "name",
+    "price"
+  ]
+}

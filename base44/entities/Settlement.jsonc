@@ -1,0 +1,47 @@
+{
+  "name": "Settlement",
+  "type": "object",
+  "properties": {
+    "orderId": {
+      "type": "string"
+    },
+    "recipientId": {
+      "type": "string"
+    },
+    "recipientType": {
+      "type": "string",
+      "enum": [
+        "RESTAURANT",
+        "RIDER",
+        "PLATFORM"
+      ]
+    },
+    "amount": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "PROCESSED",
+        "FAILED"
+      ],
+      "default": "PENDING"
+    },
+    "providerReference": {
+      "type": "string"
+    },
+    "processedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "failureReason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "orderId",
+    "recipientId",
+    "amount"
+  ]
+}

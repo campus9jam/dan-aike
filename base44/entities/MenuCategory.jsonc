@@ -1,0 +1,20 @@
+{
+  "name": "MenuCategory",
+  "type": "object",
+  "properties": {
+    "restaurantId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "sortOrder": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "restaurantId",
+    "name"
+  ]
+}

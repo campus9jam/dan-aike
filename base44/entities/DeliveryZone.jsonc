@@ -1,0 +1,45 @@
+{
+  "name": "DeliveryZone",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "polygon": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "lat": {
+            "type": "number"
+          },
+          "lng": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "baseFee": {
+      "type": "number",
+      "default": 500
+    },
+    "perKmFee": {
+      "type": "number",
+      "default": 100
+    },
+    "minFee": {
+      "type": "number",
+      "default": 300
+    },
+    "maxFee": {
+      "type": "number",
+      "default": 2000
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

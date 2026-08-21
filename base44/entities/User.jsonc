@@ -1,0 +1,48 @@
+{
+  "name": "User",
+  "type": "object",
+  "properties": {
+    "role": {
+      "type": "string",
+      "enum": [
+        "CUSTOMER",
+        "RESTAURANT_OWNER",
+        "RESTAURANT_STAFF",
+        "RIDER",
+        "SUPPORT_ADMIN",
+        "OPERATIONS_ADMIN",
+        "FINANCE_ADMIN",
+        "SUPER_ADMIN"
+      ],
+      "default": "CUSTOMER"
+    },
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "SUSPENDED",
+        "PENDING"
+      ],
+      "default": "ACTIVE"
+    },
+    "lastActiveAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "name",
+    "phone",
+    "avatar",
+    "lastActiveAt"
+  ]
+}

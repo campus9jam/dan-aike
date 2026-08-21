@@ -1,0 +1,57 @@
+{
+  "name": "Dispute",
+  "type": "object",
+  "properties": {
+    "orderId": {
+      "type": "string"
+    },
+    "customerId": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string",
+      "enum": [
+        "MISSING_ITEM",
+        "WRONG_ORDER",
+        "FOOD_DAMAGED",
+        "NEVER_DELIVERED",
+        "DELIVERY_PROBLEM",
+        "RESTAURANT_PROBLEM",
+        "RIDER_PROBLEM",
+        "OTHER"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "OPEN",
+        "UNDER_REVIEW",
+        "WAITING_FOR_INFORMATION",
+        "RESOLVED",
+        "REJECTED"
+      ],
+      "default": "OPEN"
+    },
+    "resolution": {
+      "type": "string"
+    },
+    "resolvedBy": {
+      "type": "string"
+    },
+    "resolvedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "orderId",
+    "customerId",
+    "reason"
+  ]
+}
