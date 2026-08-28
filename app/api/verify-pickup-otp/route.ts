@@ -1,0 +1,3 @@
+import {NextResponse} from 'next/server'
+import {createClient} from '@/lib/supabase/server'
+export async function POST(req:Request){const supabase=await createClient();const {orderId,otp}=await req.json();if(!orderId||!/^\d{4}$/.test(otp))return NextResponse.json({error:'Invalid OTP'}, {status:400});const {data,error}=await supabase.rpc('verify_pickup_otp',{p_order:orderId,p_otp:otp});if(error)return NextResponse.json({error:error.message},{status:400});if(!data)return NextResponse.json({error:'OTP is incorrect or order is not assigned to you'},{status:403});return NextResponse.json({ok:true,status:'picked_up'})}
